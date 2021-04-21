@@ -1,0 +1,27 @@
+version: '3.8'
+
+services: 
+  database:
+    image: mysql
+    container_name: mydatabase
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_USER: dbuser
+      MYSQL_PASSWORD: dbpass
+      MYSQL_DATABASE: 'testDatabase'
+    ports:
+      - 3306:3306
+    volumes: 
+      - ./volumes/mysql/data:/var/lib/mysql
+      - ./volumes/initializationScripts/init.sql:/docker-entrypoint-initdb.d/1.sql
+  app:
+    image: node:14
+    container_name: myapp
+    volumes:
+        - ./app:/app
+        - /app/node_modules
+    working_dir: /app
+    ports:
+        - 3000:3000
+    command: tail -f /dev/null

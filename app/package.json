@@ -1,0 +1,27 @@
+{
+  "name": "app",
+  "version": "0.0.1",
+  "description": "A test application to show how to set up a development enviroment in docker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/itd24/Docker-Compose-Example-Project.git"
+  },
+  "keywords": [
+    "docker",
+    "docker-compose",
+    "nodejs"
+  ],
+  "author": "Ziga Petek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itd24/Docker-Compose-Example-Project/issues"
+  },
+  "homepage": "https://github.com/itd24/Docker-Compose-Example-Project#readme",
+  "dependencies": {
+    "mysql2": "^2.2.5"
+  }
+}

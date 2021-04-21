@@ -1,0 +1,4 @@
+
+app/node_modules/
+volumes/mysql/data/*
+!volumes/mysql/data/.gitkeep
